@@ -1,0 +1,152 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            
+            --card-bg: #000000; /* Fundo dos cartões */
+            --primary-text: #ffffff; /* Cor do texto escuro */
+            --secondary-text: #6B7280; /* Cor do texto cinza */
+            --accent-color: #00ffae; /* Verde (cor da marca) */
+            --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+          background: #000000;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: white; /* Muda a cor do texto para branco para dar contraste */
+            color: var(--primary-text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- CONTAINER PRINCIPAL --- */
+        .container {
+            width: 100%;
+            max-width: 480px; /* Largura típica de celular */
+        }
+
+        /* --- CABEÇALHO (PERFIL) --- */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+        /* --- LISTA DE LINKS (CARTÕES) --- */
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            background-color: var(--card-bg);
+            text-decoration: none;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--hover-shadow);
+            border-color: var(--accent-color);
+        }
+
+        .card-thumb {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0; /* Impede a imagem de espremer */
+            margin-right: 16px;
+            background-color: #e5e7eb; /* Cor de fundo se imagem falhar */
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 1000;
+            color: var(--primary-text);
+            margin-bottom: 4px;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            color: var(--secondary-text);
+            display: -webkit-box;
+            -webkit: 2; /* Limita texto a 2 linhas */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Botão destaque (Fale Conosco) */
+        .btn-highlight {
+            background-color: var(--accent-color);
+            color: white;
+            text-align: center;
+            padding: 16px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 20px;
+            display: block;
+            box-shadow: 0 4px 6px rgba(5, 150, 105, 0.3);
+        }
+        
+        .btn-highlight:hover {
+            background-color: #047857;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #9CA3AF;
+        }
+        
+
+  
